@@ -1,11 +1,11 @@
 <script setup>
-import AboutSection from './AboutSection.vue';
-import BaristaSection from './BaristaSection.vue';
-import ContactSection from './ContactSection.vue';
-import HeroSection from './HeroSection.vue';
-import MenuSection from './MenuSection.vue';
-import ReviewsSection from './ReviewsSection.vue';
-import SiteFooter from './SiteFooter.vue';
+import AboutSection from './components/AboutSection.vue';
+import BaristaSection from './components/BaristaSection.vue';
+import ContactSection from './components/ContactSection.vue';
+import HeroSection from './components/HeroSection.vue';
+import MenuSection from './components/menu/MenuSection.vue';
+import ReviewsSection from './components/testimonials/ReviewsSection.vue';
+import SiteFooter from './components/SiteFooter.vue';
 
 const people = [
   {
@@ -163,8 +163,6 @@ const testimonials = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ];
-
-
 </script>
 
 <template>

@@ -1,3 +1,8 @@
+<script setup>
+import Input from './form/Input.vue';
+import Textarea from './form/Textarea.vue';
+</script>
+
 <template>
   <section class="contact-section section-padding" id="section_5">
     <div class="container">
@@ -11,23 +16,16 @@
           <form action="#" method="post" class="custom-form contact-form" role="form">
             <div class="row">
               <div class="col-lg-6 col-12">
-                <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
-
-                <input type="text" name="name" id="name" class="form-control" placeholder="Jackson" required />
+                <Input type="text" name="name" id="name" placeholder="Jackson" :required="true" label="Name" />
               </div>
 
               <div class="col-lg-6 col-12">
-                <label for="email" class="form-label">Email Address</label>
-
-                <input type="email" name="email" id="email" class="form-control" placeholder="Jack@gmail.com"
-                  required />
+                <Input type="email" name="email" id="email" placeholder="Jack@gmail.com" :required="true"
+                  label="Email Address" />
               </div>
 
               <div class="col-12">
-                <label for="message" class="form-label">How can we help?</label>
-
-                <textarea name="message" rows="4" class="form-control" id="message" placeholder="Message"
-                  required></textarea>
+                <Textarea name="message" rows="4" id="message" placeholder="Message" label="How can we help?" />
               </div>
             </div>
 
