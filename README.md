@@ -1,35 +1,49 @@
-# vue-example
+# vue js. 2. Компоненты
 
-This template should help get you started developing with Vue 3 in Vite.
+Задача:
 
-## Recommended IDE Setup
+разбить все что написано в `App.vue` на компоненты.
+смысл этой задачи просто познакомиться с компонентами, в компоненты по передавать пропсы и т.д
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+в проекте есть папка `components`
 
-## Customize configuration
+дизайн разбит на секции, поэтому создаем компоненты, помещаем туда все что в секциях.
+Импортируем компоненты в `App.vue`
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+продолжаем дальше разбивать компоненты,
+например, меню,
+1ый компонент, это карточка меню,
+2ой это карточка блюд
 
-## Project Setup
+отзывы:
+карточка, аватар, рейтинг
 
-```sh
-npm install
+инпуты и текстарею с лейблом, тоже вынести в компонент - добавить события через `defineModel`
+
+в папке `components`, можно создать сколько угодно папок, не нужно все компоненты складывать в эту папку
+
+```
+components/
+  testimonials/
+    Testimonials.vue
+    TestimonialsCard.vue
+  rating/
+    Rating.vue
+  form
+    Input.vue
+    Textarea.vue
 ```
 
-### Compile and Hot-Reload for Development
+и т.д
 
-```sh
-npm run dev
-```
+во vue, один файл - 1 компонент
 
-### Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+перед запуском проекта нужно установить пакеты:
 
-### Lint with [ESLint](https://eslint.org/)
+`npm install` или `npm ci`
 
-```sh
-npm run lint
-```
+потом запускаем проект:
+
+`npm run dev`
