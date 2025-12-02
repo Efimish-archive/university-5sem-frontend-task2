@@ -1,12 +1,15 @@
 <script setup>
-const model = defineModel()
+const model = defineModel();
 
 const { name, rows, id, placeholder, required, label } = defineProps({
   name: null,
   rows: null,
   id: null,
   placeholder: null,
-  required: null,
+  required: {
+    type: Boolean,
+    default: false,
+  },
   label: null,
 });
 </script>

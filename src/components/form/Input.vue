@@ -1,18 +1,23 @@
 <script setup>
-const model = defineModel()
+const model = defineModel();
 
 const { type, name, id, placeholder, required, label } = defineProps({
   type: null,
   name: null,
   id: null,
   placeholder: null,
-  required: null,
+  required: {
+    type: Boolean,
+    default: false,
+  },
   label: null,
 });
 </script>
 
 <template>
-  <label :for="name" class="form-label">{{ label }} <sup v-if="required" class="text-danger">*</sup></label>
+  <label :for="name" class="form-label"
+    >{{ label }} <sup v-if="required" class="text-danger">*</sup></label
+  >
   <input
     class="form-control"
     :type="type"
@@ -21,5 +26,5 @@ const { type, name, id, placeholder, required, label } = defineProps({
     :placeholder="placeholder"
     :required="required"
     v-model="model"
-  >
+  />
 </template>
